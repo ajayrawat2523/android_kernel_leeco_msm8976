@@ -226,7 +226,6 @@ static void mdss_dsi_panel_bklt_dcs(struct mdss_dsi_ctrl_pdata *ctrl, int level)
 	pr_debug("%s: level=%d\n", __func__, level);
 
 #ifdef CONFIG_FB_MSM_MDSS_BACKLIGHT_LEECO
-	// For truly-r69006-1080p-5p5lg panels
 	if (pinfo->panel_supply_order == 2) {
 		led_pwm1[1] = (unsigned char)(level>>4);
 		led_pwm1[2] = 0;
